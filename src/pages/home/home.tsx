@@ -59,30 +59,42 @@ function Home() {
       <section className="services-row">
         <h2 className="services-title">Onze diensten</h2>
         <div className="services-cards-row">
-          <div className="service-card">
+          <Link
+            to="/diensten/mol"
+            className="service-card"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
             <img src={MolFoto} alt="Mollenoverlast" className="service-img" />
             <h3>Mollenoverlast</h3>
             <p>
               Last van molshopen in je tuin of op je terrein? Wij zorgen voor
               een doeltreffende aanpak van mollenoverlast.
             </p>
-          </div>
-          <div className="service-card">
+          </Link>
+          <Link
+            to="/diensten/vogel"
+            className="service-card"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
             <img src={VogelFoto} alt="Vogeloverlast" className="service-img" />
             <h3>Vogeloverlast</h3>
             <p>
               Duiven, kraaien of meeuwen die voor overlast zorgen? Wij bieden
               oplossingen voor verschillende vogelsoorten.
             </p>
-          </div>
-          <div className="service-card">
+          </Link>
+          <Link
+            to="/diensten/wesp"
+            className="service-card"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
             <img src={WespFoto} alt="Wespenoverlast" className="service-img" />
             <h3>Wespenoverlast</h3>
             <p>
               Wespen in de tuin, op het terras of in huis? Wij verwijderen
               wespennesten snel, veilig en vakkundig.
             </p>
-          </div>
+          </Link>
         </div>
       </section>
 
