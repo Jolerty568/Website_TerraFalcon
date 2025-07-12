@@ -1,0 +1,65 @@
+.bedankt-container {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+}
+.bedankt-content {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+.bedankt-logo {
+  width: 90px;
+  height: auto;
+  margin-bottom: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #e3f0ff;
+}
+.bedankt-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #012030;
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+  text-shadow: 0 2px 8px #e3f0ff;
+}
+.bedankt-text {
+  font-size: 1.15rem;
+  color: #145374;
+  margin-bottom: 2rem;
+}
+.bedankt-btn {
+  display: inline-block;
+  background: #9beba2;
+  color: #012030;
+  font-weight: 700;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px #b6e2d3;
+  transition: background 0.2s;
+}
+.bedankt-btn:hover {
+  background: #7fd18c;
+}
+@media (max-width: 700px) {
+  .bedankt-content {
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+  .bedankt-title {
+    font-size: 1.2rem;
+  }
+  .bedankt-text {
+    font-size: 1rem;
+  }
+  .bedankt-logo {
+    width: 60px;
+  }
+}

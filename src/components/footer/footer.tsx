@@ -8,23 +8,13 @@ function Footer() {
         <div className="footer-section footer-links">
           <ul>
             <li>
-              <Link className="navlink" to="/about">
-                Over ons
+              <Link className="navlink" to="/blog">
+                Blog
               </Link>
             </li>
             <li>
-              <Link className="navlink" to="/jobs">
-                Jobs
-              </Link>
-            </li>
-            <li>
-              <Link className="navlink" to="/tewerk">
-                Hoe gaan wij te werk
-              </Link>
-            </li>
-            <li>
-              <Link className="navlink" to="/tarieven">
-                Tarieven
+              <Link className="navlink" to="/diensten">
+                Onze diensten
               </Link>
             </li>
           </ul>
@@ -35,7 +25,9 @@ function Footer() {
           <span>Lommel, Limburg, België</span>
         </div>
         <div className="footer-section footer-contact">
-          <span>GSM: 012 34 56 78</span>
+          <a href="tel:+32483323646" className="footer-phone-link">
+            GSM: +32 483 32 36 46
+          </a>
           <br />
           <br />
           <Link to="/contact" className="footer-contact-btn">
@@ -46,7 +38,7 @@ function Footer() {
       <div className="footer-bar">
         <div className="footer-socials-bar">
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/profile.php?id=61573949003897"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook"
@@ -54,7 +46,7 @@ function Footer() {
             <i className="fab fa-facebook-f"></i>
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/terrafalcon.be/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"

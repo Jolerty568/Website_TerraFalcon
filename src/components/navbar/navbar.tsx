@@ -8,6 +8,8 @@ import fav from "../../img/fav.png";
 function Navbar() {
   const location = useLocation();
 
+  
+
   useEffect(() => {
     const offcanvas = document.getElementById("offcanvasDarkNavbar");
     if (!offcanvas) return;
@@ -71,9 +73,9 @@ function Navbar() {
                 <li>
                   <Link
                     className={`dropdown-item${
-                      location.pathname === "/diensten/mol" ? " active" : ""
+                      location.pathname === "/diensten/mollenoverlast" ? " active" : ""
                     }`}
-                    to="/diensten/mol"
+                    to="/diensten/mollenoverlast"
                   >
                     Mollenoverlast
                   </Link>
@@ -81,9 +83,9 @@ function Navbar() {
                 <li>
                   <Link
                     className={`dropdown-item${
-                      location.pathname === "/diensten/vogel" ? " active" : ""
+                      location.pathname === "/diensten/vogeloverlast" ? " active" : ""
                     }`}
-                    to="/diensten/vogel"
+                    to="/diensten/vogeloverlast"
                   >
                     Vogeloverlast
                   </Link>
@@ -91,9 +93,9 @@ function Navbar() {
                 <li>
                   <Link
                     className={`dropdown-item${
-                      location.pathname === "/diensten/wesp" ? " active" : ""
+                      location.pathname === "/diensten/wespenoverlast" ? " active" : ""
                     }`}
-                    to="/diensten/wesp"
+                    to="/diensten/wespenoverlast"
                   >
                     Wespenoverlast
                   </Link>
@@ -116,11 +118,11 @@ function Navbar() {
             <li className="nav-item">
               <Link
                 className={`nav-link${
-                  location.pathname === "/tarieven" ? " active" : ""
+                  location.pathname === "/blog" ? " active" : ""
                 }`}
-                to="/tarieven"
+                to="/blog"
               >
-                Tarieven
+                Blog
               </Link>
             </li>
             <li className="nav-item">
@@ -188,9 +190,9 @@ function Navbar() {
                 <li>
                   <Link
                     className={`dropdown-item${
-                      location.pathname === "/diensten/mol" ? " active" : ""
+                      location.pathname === "/diensten/mollenoverlast" ? " active" : ""
                     }`}
-                    to="/diensten/mol"
+                    to="/diensten/mollenoverlast"
                   >
                     Mollenoverlast
                   </Link>
@@ -198,9 +200,9 @@ function Navbar() {
                 <li>
                   <Link
                     className={`dropdown-item${
-                      location.pathname === "/diensten/vogel" ? " active" : ""
+                      location.pathname === "/diensten/vogeloverlast" ? " active" : ""
                     }`}
-                    to="/diensten/vogel"
+                    to="/diensten/vogeloverlast"
                   >
                     Vogeloverlast
                   </Link>
@@ -208,9 +210,9 @@ function Navbar() {
                 <li>
                   <Link
                     className={`dropdown-item${
-                      location.pathname === "/diensten/wesp" ? " active" : ""
+                      location.pathname === "/diensten/wespenoverlast" ? " active" : ""
                     }`}
-                    to="/diensten/wesp"
+                    to="/diensten/wespenoverlast"
                   >
                     Wespenoverlast
                   </Link>
@@ -233,11 +235,11 @@ function Navbar() {
             <li className="nav-item">
               <Link
                 className={`nav-link${
-                  location.pathname === "/tarieven" ? " active" : ""
+                  location.pathname === "/blog" ? " active" : ""
                 }`}
-                to="/tarieven"
+                to="/blog"
               >
-                Tarieven
+                Blog
               </Link>
             </li>
             <li className="nav-item">

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import "./home.css";
-import AboutPhoto from "../../img/FullLogo_Transparent.png";
+import AboutPhoto from "../../img/Mika.jpeg";
 import ViteLogo from "../../img/FullLogo_NoBuffer.jpg";
 import VogelFoto from "../../img/home/birds-4776407_1280.jpg";
 import WespFoto from "../../img/home/swarm-1903243_1280.jpg";
@@ -99,7 +100,7 @@ function Home() {
       </section>
 
       {/* Stappenplan sectie */}
-      <section className="steps-section">
+      <section className="steps-section" id="steps-section">
         <h2>Zo ga ik te werk</h2>
         <p className="section-desc">
           In 4 heldere stappen help ik je snel en vakkundig verder!

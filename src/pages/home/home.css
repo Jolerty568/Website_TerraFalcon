@@ -218,6 +218,19 @@ main.main-content {
   background: none;
   animation: servicesFadeIn 1.2s cubic-bezier(0.23, 1, 0.32, 1);
 }
+
+@media (max-width: 700px) {
+  .services-cards-row {
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch;
+  }
+  .service-card {
+    max-width: 98vw;
+    margin: 0 auto;
+  }
+}
+
 @keyframes servicesFadeIn {
   from { opacity: 0; transform: translateY(40px); }
   to { opacity: 1; transform: translateY(0); }
