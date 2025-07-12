@@ -1,19 +1,44 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./navbar.css";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { useEffect } from "react";
 import logo from "../../img/FullLogo_NoBuffer.jpg";
+import biglogo from "../../img/logo.png";
 import fav from "../../img/fav.png";
 
 function Navbar() {
   const location = useLocation();
 
-  
+  // State voor logo zichtbaar
+  const [showLogo, setShowLogo] = useState(true);
 
   useEffect(() => {
-    const offcanvas = document.getElementById("offcanvasDarkNavbar");
-    if (!offcanvas) return;
-    return () => {};
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setShowLogo(false);
+      } else {
+        setShowLogo(true);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // State om te detecteren of offcanvas open is
+  const [offcanvasOpen, setOffcanvasOpen] = useState(false);
+
+  // Open/close events koppelen aan Bootstrap offcanvas
+  useEffect(() => {
+    const offcanvasEl = document.getElementById("offcanvasDarkNavbar");
+    if (!offcanvasEl) return;
+    const handleShow = () => setOffcanvasOpen(true);
+    const handleHide = () => setOffcanvasOpen(false);
+    offcanvasEl.addEventListener("show.bs.offcanvas", handleShow);
+    offcanvasEl.addEventListener("hide.bs.offcanvas", handleHide);
+    return () => {
+      offcanvasEl.removeEventListener("show.bs.offcanvas", handleShow);
+      offcanvasEl.removeEventListener("hide.bs.offcanvas", handleHide);
+    };
   }, []);
 
   return (
@@ -25,20 +50,58 @@ function Navbar() {
         data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasDarkNavbar"
         aria-controls="offcanvasDarkNavbar"
-        aria-label="Open menu"
-        style={{ position: "fixed", top: 18, right: 18, zIndex: 2000 }}
+        aria-label={offcanvasOpen ? "Sluit menu" : "Open menu"}
+        style={{
+          position: "fixed",
+          top: 18,
+          right: 18,
+          zIndex: 2000,
+          width: 48,
+          height: 48,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
       >
-        <span className="navbar-toggler-icon"></span>
+        {offcanvasOpen ? (
+          <span
+            style={{
+              fontSize: 24,
+              lineHeight: 1,
+              fontWeight: "bold",
+              display: "inline-block",
+              width: 24,
+              height: 24,
+              textAlign: "center",
+            }}
+          >
+            &times;
+          </span>
+        ) : (
+          <span
+            className="navbar-toggler-icon"
+            style={{ width: 24, height: 24, display: "inline-block" }}
+          ></span>
+        )}
       </button>
       <nav
         className="navbar navbar-expand-lg custom-navbar"
         style={{ flexDirection: "column", alignItems: "center" }}
       >
-        <div className="logo-navbar" style={{ marginBottom: "20px" }}>
-          <Link to="/">
-            <img src={logo} alt="Bedrijfslogo" />
-          </Link>
-        </div>
+        {showLogo && (
+          <div
+            className="logo-navbar"
+            style={{ marginBottom: "20px", paddingLeft: "24px" }}
+          >
+            <Link to="/">
+              <img
+                src={biglogo}
+                alt="Bedrijfslogo"
+                style={{ height: 110, width: "auto" }}
+              />
+            </Link>
+          </div>
+        )}
         <div style={{ width: "100%" }}>
           {/* Verwijder de navbar-toggler uit de sticky navbar, alleen mobiel knopje blijft */}
           {/* Desktop nav links */}
@@ -46,7 +109,23 @@ function Navbar() {
             className="navbar-nav offcanvas-nav d-none d-lg-flex"
             style={{ justifyContent: "flex-start", width: "100%" }}
           >
-            <li className="nav-item">
+            <li
+              className="nav-item"
+              style={{ display: "flex", alignItems: "center" }}
+            >
+              {!showLogo && (
+                <img
+                  src={biglogo}
+                  alt="Logo"
+                  style={{
+                    height: 28,
+                    width: "auto",
+                    marginRight: 8,
+                    verticalAlign: "middle",
+                    marginLeft: 12,
+                  }}
+                />
+              )}
               <Link
                 className={`nav-link${
                   location.pathname === "/" ? " active" : ""
@@ -73,7 +152,9 @@ function Navbar() {
                 <li>
                   <Link
                     className={`dropdown-item${
-                      location.pathname === "/diensten/mollenoverlast" ? " active" : ""
+                      location.pathname === "/diensten/mollenoverlast"
+                        ? " active"
+                        : ""
                     }`}
                     to="/diensten/mollenoverlast"
                   >
@@ -83,7 +164,9 @@ function Navbar() {
                 <li>
                   <Link
                     className={`dropdown-item${
-                      location.pathname === "/diensten/vogeloverlast" ? " active" : ""
+                      location.pathname === "/diensten/vogeloverlast"
+                        ? " active"
+                        : ""
                     }`}
                     to="/diensten/vogeloverlast"
                   >
@@ -93,7 +176,9 @@ function Navbar() {
                 <li>
                   <Link
                     className={`dropdown-item${
-                      location.pathname === "/diensten/wespenoverlast" ? " active" : ""
+                      location.pathname === "/diensten/wespenoverlast"
+                        ? " active"
+                        : ""
                     }`}
                     to="/diensten/wespenoverlast"
                   >
@@ -190,7 +275,9 @@ function Navbar() {
                 <li>
                   <Link
                     className={`dropdown-item${
-                      location.pathname === "/diensten/mollenoverlast" ? " active" : ""
+                      location.pathname === "/diensten/mollenoverlast"
+                        ? " active"
+                        : ""
                     }`}
                     to="/diensten/mollenoverlast"
                   >
@@ -200,7 +287,9 @@ function Navbar() {
                 <li>
                   <Link
                     className={`dropdown-item${
-                      location.pathname === "/diensten/vogeloverlast" ? " active" : ""
+                      location.pathname === "/diensten/vogeloverlast"
+                        ? " active"
+                        : ""
                     }`}
                     to="/diensten/vogeloverlast"
                   >
@@ -210,7 +299,9 @@ function Navbar() {
                 <li>
                   <Link
                     className={`dropdown-item${
-                      location.pathname === "/diensten/wespenoverlast" ? " active" : ""
+                      location.pathname === "/diensten/wespenoverlast"
+                        ? " active"
+                        : ""
                     }`}
                     to="/diensten/wespenoverlast"
                   >
@@ -265,7 +356,9 @@ function Navbar() {
               </div>
               <div className="offcanvas-footer-section offcanvas-footer-contact">
                 <h6>Contact</h6>
-                <span>GSM: 012 34 56 78</span>
+                <span>
+                  GSM: <a href="tel:+32483323646">+32 483 32 36 46</a>
+                </span>
                 <br />
                 <Link
                   to="/contact"

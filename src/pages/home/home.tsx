@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
 import "./home.css";
 import AboutPhoto from "../../img/Mika.jpeg";
-import ViteLogo from "../../img/FullLogo_NoBuffer.jpg";
+import ViteLogo from "../../img/datum.jpg";
 import VogelFoto from "../../img/home/birds-4776407_1280.jpg";
 import WespFoto from "../../img/home/swarm-1903243_1280.jpg";
 import MolFoto from "../../img/home/mol.jpg";
@@ -116,7 +115,7 @@ function Home() {
           </div>
           <div className="step-item">
             <div className="step-img">
-              <img src={DealFoto} alt="afspraak" />
+              <img src={ViteLogo} alt="afspraak" />
             </div>
             <div className="step-number">2</div>
             <div className="step-title">Afspraak maken</div>
@@ -132,7 +131,7 @@ function Home() {
           </div>
           <div className="step-item">
             <div className="step-img">
-              <img src={ViteLogo} alt="Afloop" />
+              <img src={DealFoto} alt="Afloop" />
             </div>
             <div className="step-number">4</div>
             <div className="step-title">Afloop.</div>

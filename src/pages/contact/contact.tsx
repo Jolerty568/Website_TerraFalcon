@@ -1,5 +1,5 @@
 import "./contact.css";
-import ContactFoto from "../../img/home/contact.jpg";
+import ContactFoto from "../../img/loki.jpeg";
 import ReCAPTCHA from "react-google-recaptcha";
 
 function Contact() {
@@ -74,6 +74,26 @@ function Contact() {
               required
             />
           </div>
+          <div className="form-group">
+            <label htmlFor="address">Adres</label>
+            <input
+              type="text"
+              id="address"
+              name="Adres"
+              placeholder="Straat en huisnummer"
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="city">Woonplaats</label>
+            <input
+              type="text"
+              id="city"
+              name="Woonplaats"
+              placeholder="Woonplaats (stad/gemeente)"
+              required
+            />
+          </div>
         </div>
         <div className="form-overlast-row">
           <label className="overlast-label">Welke soort overlast heb je?</label>
@@ -134,13 +154,6 @@ function Contact() {
         </div>
         <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" id="captcha-token" name="captcha-token" />
-        <div className="form-group">
-          <br />
-          <ReCAPTCHA
-            sitekey="6Le6_oArAAAAAG0yDYqa2qnFbQfgKE-PRGGlmrBB"
-            onChange={handleCaptcha}
-          />
-        </div>
         <input
           type="hidden"
           name="_next"
@@ -150,6 +163,14 @@ function Contact() {
           Verstuur bericht
         </button>
       </form>
+
+      <div className="form-group">
+        <br />
+        <ReCAPTCHA
+          sitekey="6Le6_oArAAAAAG0yDYqa2qnFbQfgKE-PRGGlmrBB"
+          onChange={handleCaptcha}
+        />
+      </div>
       <div className="contact-info-box fade-in">
         <h3>Direct contact</h3>
         <p>
