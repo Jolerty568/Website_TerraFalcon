@@ -6,7 +6,7 @@ function Wespenoverlast() {
     <div className="mol-container">
       <h1 className="mol-title">Wespenoverlast</h1>
       <p className="mol-subtitle">
-        Wespen in de tuin, op het terras of in huis? Wij verwijderen
+        Wespen in de tuin, op het terras of in huis? Wij bestreiden
         wespennesten snel, veilig en vakkundig!
       </p>
       <div className="mol-grid">
@@ -42,7 +42,7 @@ function Wespenoverlast() {
         <div className="mol-cta">
           <h3>Professionele hulp nodig?</h3>
           <p>
-            Wij verwijderen wespennesten snel, veilig en vakkundig. Neem direct
+            Wij bestreiden wespennesten snel, veilig en vakkundig. Neem direct
             contact op voor een snelle interventie!
           </p>
           <a href="/contact" className="mol-contact-btn">

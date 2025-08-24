@@ -2,7 +2,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./navbar.css";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../../img/FullLogo_NoBuffer.jpg";
 import biglogo from "../../img/logo.png";
 import fav from "../../img/fav.png";
 
@@ -372,7 +371,7 @@ function Navbar() {
             <div className="offcanvas-footer-bar">
               <div className="offcanvas-footer-socials">
                 <a
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/profile.php?id=61573949003897"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"
@@ -380,7 +379,7 @@ function Navbar() {
                   <i className="fab fa-facebook-f"></i>
                 </a>
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/terrafalcon.be/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"

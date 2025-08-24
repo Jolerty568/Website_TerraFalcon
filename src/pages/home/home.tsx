@@ -60,7 +60,7 @@ function Home() {
         <h2 className="services-title">Onze diensten</h2>
         <div className="services-cards-row">
           <Link
-            to="/diensten/mol"
+            to="/diensten/mollenoverlast"
             className="service-card"
             style={{ textDecoration: "none", color: "inherit" }}
           >
@@ -72,7 +72,7 @@ function Home() {
             </p>
           </Link>
           <Link
-            to="/diensten/vogel"
+            to="/diensten/vogeloverlast"
             className="service-card"
             style={{ textDecoration: "none", color: "inherit" }}
           >
@@ -84,14 +84,14 @@ function Home() {
             </p>
           </Link>
           <Link
-            to="/diensten/wesp"
+            to="/diensten/wespenoverlast"
             className="service-card"
             style={{ textDecoration: "none", color: "inherit" }}
           >
             <img src={WespFoto} alt="Wespenoverlast" className="service-img" />
             <h3>Wespenoverlast</h3>
             <p>
-              Wespen in de tuin, op het terras of in huis? Wij verwijderen
+              Wespen in de tuin, op het terras of in huis? Wij bestrijden
               wespennesten snel, veilig en vakkundig.
             </p>
           </Link>

@@ -10,21 +10,21 @@ const DIENSTEN = [
     title: "Mollenoverlast",
     img: MolFoto,
     desc: "Last van molshopen in je tuin of op je terrein? Wij zorgen voor een doeltreffende aanpak van mollenoverlast.",
-    link: "/diensten/mol",
+    link: "/diensten/mollenoverlast",
   },
   {
     key: "vogel",
     title: "Vogeloverlast",
     img: VogelFoto,
     desc: "Duiven, kraaien of meeuwen die voor overlast zorgen? Wij bieden oplossingen voor verschillende vogelsoorten.",
-    link: "/diensten/vogel",
+    link: "/diensten/vogeloverlast",
   },
   {
     key: "wesp",
     title: "Wespenoverlast",
     img: WespFoto,
     desc: "Wespen in de tuin, op het terras of in huis? Wij verwijderen wespennesten snel, veilig en vakkundig.",
-    link: "/diensten/wesp",
+    link: "/diensten/wespenoverlast",
   },
 ];
 
